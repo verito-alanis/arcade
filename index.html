@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videojuegos vintage</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/jparallax.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        .parallax-viewport{
+            width: 2256px;
+            height: 300px;
+            max-width: 89em;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>¡Bienvenido a nuestro ARCADE!</h1><br>
+
+    <!-- Inicia ventana de paralaje  -->
+    <div class="parallax-viewport" id="parallax">
+        <!-- Capas de paralaje  -->
+        <div class="parallax-layer" style="width: 2256px; height: 461px;">
+          <img src="imagen/world.png" style="position: absolute; left: 0px; top: 0px;">
+        </div>
+        <div class="parallax-layer" style="width: 1948px; height: 261px;" >
+            <img src="imagen/layer2.png" style="position: absolute; left: 0px; top: 0px;">
+        </div>
+        <div class="parallax-layer" style="width: 1275px; height: 297px;">
+            <img src="imagen/layer1.png" style="position: absolute; top: 0px; left: 0px;">
+        </div>
+    </div>
+
+    <h3>Escoge tu juego</h3>
+    
+    <div class="juegos">
+        <a href="pacman.html"><img src="./imagen/pacman.webp" alt=""></a>
+        <a href="frogger.html"><img src="./imagen/frogger.jpg" alt=""></a>
+        <a href="auto-audio.html"><img src="./imagen/rally.jpg" alt=""></a>
+    </div>
+
+
+
+    <!-- El JavaScript  -->
+    <script src="js/jquery1.7.2.js"></script>
+    <script src="js/jquery.event.frame.js"></script>
+    <script src="js/jquery.parallax.js"></script>
+    <script>
+        jQuery(document).ready(function(){
+            jQuery('#parallax .parallax-layer')
+            
+            .parallax({
+                mouseport: jQuery('#parallax')
+            });
+        });
+    </script>
+</body>
+</html>
